@@ -8,27 +8,46 @@ namespace CsharpForTesters._03_Wyjatki
     {
         public static void Main(string[] args)
         {
-            int[] arr1 = { };
-            int[] arr2 = { 1, 11, 3, 4, 9 };
-
-           
-            Console.WriteLine(GetMax(arr1));
-            Console.WriteLine(GetMax(arr2));
+            int[] arr1 = new int[0];
+            int[] arr2 =  { 1, 11, 3, 4, 9 };
+            //arr2 = { 1, 11, 3, 4, 9 };
+            try
+            {
+                Console.WriteLine(GetMax(arr1));
+                Console.WriteLine(GetMax(arr2));
+            }
+            catch (Exception ex)
+            {
+                if (arr.Length == 0)
+                {
+                    throw new Exception("Treść wyjątku");
+                }
+            }
         }
 
         public static double GetMax(int[] arr)
         {
-            double max = arr[0];
-            for (int i = 0; i < arr.Length; i++)
-            {
-
-                if (arr[i] > max)
+            try {
+                double max = arr[0];
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    max = arr[i];
+
+                    if (arr[i] > max)
+                    {
+                        max = arr[i];
+                    }
+                }
+
+                return max;
+            }
+            catch (Exception ex)
+            {
+                if (arr.Length == 0)
+                {
+                    throw new Exception("Treść wyjątku");
                 }
             }
-
-            return max;
+            return 0;
         }
     }
 }
