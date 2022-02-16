@@ -10,7 +10,7 @@ namespace CsharpForTesters._02_Debugowanie
         {
             var v = 0;
 
-            for (int i = 1000; i >= 0; i--)
+            for (int i = 1000; i > 0; i--)
             {
                 v = i < 9999 ? 10 / i : 10 * i;
             }
