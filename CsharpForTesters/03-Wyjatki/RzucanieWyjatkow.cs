@@ -18,7 +18,7 @@ namespace CsharpForTesters._03_Wyjatki
             }
             catch (Exception ex)
             {
-                if (arr.Length == 0)
+                if (arr1.Length == 0)
                 {
                     throw new Exception("Treść wyjątku");
                 }
@@ -27,7 +27,7 @@ namespace CsharpForTesters._03_Wyjatki
 
         public static double GetMax(int[] arr)
         {
-            try {
+        
                 double max = arr[0];
                 for (int i = 0; i < arr.Length; i++)
                 {
@@ -39,15 +39,7 @@ namespace CsharpForTesters._03_Wyjatki
                 }
 
                 return max;
-            }
-            catch (Exception ex)
-            {
-                if (arr.Length == 0)
-                {
-                    throw new Exception("Treść wyjątku");
-                }
-            }
-            return 0;
+            
         }
     }
 }
